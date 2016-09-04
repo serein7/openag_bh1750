@@ -36,7 +36,7 @@ class Bh1750 : public Module {
 
   private:
     // Private variables
-    float _light_illuminance;
+    uint16_t _light_illuminance;
     bool _send_light_illuminance;
     uint32_t _time_of_last_reading;
     const static uint32_t _min_update_interval = 2000;

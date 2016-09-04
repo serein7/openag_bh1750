@@ -25,7 +25,7 @@ void Bh1750::update() {
 }
 
 bool Bh1750::get_light_illuminance(std_msgs::UInt16 &msg) {
-  msg.data = (int)_light_illuminance,(DEC);
+  msg.data = _light_illuminance;
   bool res = _send_light_illuminance;
   _send_light_illuminance = false;
   return res;
@@ -49,7 +49,7 @@ void Bh1750::readData() {
     i++;
   }
   Wire.endTransmission();
-  _light_illuminance = ((reply[0]<<8)|reply[1])/1.2;
+  _light_illuminance = (uint16_t)(((reply[0]<<8)|reply[1])/1.2);
   if(i==2 && _light_illuminance>0) {
       _send_light_illuminance = true;
       status_level = OK;

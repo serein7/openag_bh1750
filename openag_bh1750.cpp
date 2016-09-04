@@ -24,7 +24,7 @@ void Bh1750::update() {
   }
 }
 
-bool Bh1750::get_light_illuminance(std_msgs::Float32 &msg) {
+bool Bh1750::get_light_illuminance(std_msgs::UInt16 &msg) {
   msg.data = (int)_light_illuminance,(DEC);
   bool res = _send_light_illuminance;
   _send_light_illuminance = false;

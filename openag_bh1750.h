@@ -22,7 +22,7 @@
 
 #include <Wire.h>
 #include <openag_module.h>
-#include <std_msgs/Float32.h>
+#include <std_msgs/UInt16.h>
 
 /**
  * \brief Air temperature and air humidity sensor.
@@ -32,7 +32,7 @@ class Bh1750 : public Module {
   public:
     void begin();
     void update();
-    bool get_light_illuminance(std_msgs::Float32 &msg);
+    bool get_light_illuminance(std_msgs::UInt16 &msg);
 
   private:
     // Private variables

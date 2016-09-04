@@ -9,7 +9,7 @@
  ****************************************************/
 #include "openag_bh1750.h"
 
-void BH1750::begin() {
+void Bh1750::begin() {
   Wire.begin(); // enable i2c port
   status_level = OK;
   status_msg = "";

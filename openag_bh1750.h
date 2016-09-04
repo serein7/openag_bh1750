@@ -27,7 +27,7 @@
 /**
  * \brief Air temperature and air humidity sensor.
  */
-class Bh2315 : public Module {
+class Bh1750 : public Module {
 
   public:
     void begin();

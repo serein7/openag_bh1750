@@ -56,6 +56,6 @@ void Bh1750::readData() {
       status_msg = "";
   } else {
     status_level = ERROR;
-    status_msg = "Sensor response is invalid";
+    status_msg = "31";
   }
 }
